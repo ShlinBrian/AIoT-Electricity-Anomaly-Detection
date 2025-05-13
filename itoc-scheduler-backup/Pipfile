@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+pytz = "==2020.1"
+requests = "==2.23.0"
+loguru = "==0.5.3"
+schedule = "==0.6.0"
+ping3 = "==2.7.0"
+redis = "==3.5.3"
+freezegun = "==1.1.0"
+pytest-mock = "==3.6.0"
+sqlalchemy = "==1.4.20"
+requests2 = "==2.16.0"
+psycopg2-binary = "==2.9.1"
+pywebpush = "==1.14.0"
+pandas = "*"
+pickle5 = "==0.0.12"
+numpy = "*"
+scikit-learn = "*"
+matplotlib = "*"
+
+[requires]
+python_version = "3.7"

@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  itocbackend:
+    container_name: itoc-backend
+    build: .
+    image: itoc-backend
+    restart: always
+#   network_mode: host
+    env_file:
+      - .env
+    ports:
+      - 9001:9000
+
+  postgres:
+    image: postgres:11
+    container_name: itoc-db
+    restart: always
+#    network_mode: host
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    name: itoc_data
